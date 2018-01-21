@@ -1,0 +1,45 @@
+{
+  "name": "email-front-end",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Front end for email",
+  "author": "Shoaib Gauhar",
+  "license": "Private",
+  "main": "./index.html",
+  "jspm": {
+    "dependencies": {
+      "@angular/common": "npm:@angular/common@^2.4.4",
+      "@angular/compiler": "npm:@angular/compiler@^2.4.4",
+      "@angular/core": "npm:@angular/core@^2.4.4",
+      "@angular/forms": "npm:@angular/forms@^2.4.4",
+      "@angular/http": "npm:@angular/http@^2.4.4",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.4.4",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.4.4",
+      "@angular/router": "npm:@angular/router@^3.4.1",
+      "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
+      "css": "github:systemjs/plugin-css@^0.1.32",
+      "hammer": "github:hammerjs/hammer.js@^2.0.8",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.9",
+      "rxjs": "npm:rxjs@^5.0.3",
+      "systemjs": "npm:systemjs@^0.19.43",
+      "text": "github:systemjs/plugin-text@^0.0.9",
+      "zone.js": "npm:zone.js@^0.7.6"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^2.0.7"
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.3.0",
+    "popper.js": "^1.12.9",
+    "base64-js": "^1.2.0",
+    "buffer": "^5.0.2",
+    "ieee754": "^1.1.8",
+    "w3c-blob": "0.0.1"
+  },
+  "devDependencies": {
+    "jspm": "^0.16.53",
+    "live-server": "^1.2.0"
+  }
+}

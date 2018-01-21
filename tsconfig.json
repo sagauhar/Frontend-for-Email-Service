@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "outDir": "build",
+    "paths": {
+      "@angular/*": [
+        "jspm_packages/npm/@angular/*@2.4.4"
+      ],
+      "@angular/router": [
+        "jspm_packages/npm/@angular/router@3.4.4"
+      ],
+      "@angular/material": [
+        "jspm_packages/npm/@angular/material@2.0.0-beta.1"
+      ],
+      "@types/jasmine": [
+        "jspm_packages/npm/@angular/material@2.0.0-beta.1"
+      ],
+      "rxjs/*": [
+        "jspm_packages/npm/rxjs@5.0.3/*"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "es6-shim",
+      "hammerjs"
+    ]
+  },
+  "include": [
+    "app/**/*.ts"
+  ],
+  "exclude": [
+    "jspm_packages",
+    "node_modules",
+    "dist"
+  ]
+}

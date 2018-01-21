@@ -1,0 +1,78 @@
+<div class="row">
+
+    <div class="col-lg-8 col-lg-offset-2">
+
+        <h1>Email Form</h1>
+
+        <form id="contact-form" role="form">
+
+            <div class="controls">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert" [ngClass]="messageClass" role="alert">
+                            {{message}}
+                        </div>
+                        <div class="alert alert-danger" *ngIf="toEmail.errors && toEmail.errors.pattern"> 
+                            To address is not valid.
+                        </div>
+                        <div class="alert alert-danger" *ngIf="ccEmail.errors && ccEmail.errors.pattern"> 
+                            CC address is not valid.
+                        </div>
+                        <div class="alert alert-danger" *ngIf="bccEmail.errors && bccEmail.errors.pattern"> 
+                            BCC address is not valid.
+                        </div>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_to">To *</label>
+                            <input id="form_to" autofocus type="email" name="to" [(ngModel)]="request.to" class="form-control" placeholder="Multiple email addresses need to be separated by semi-colon (;)" required="required" [pattern]="requiredEmailRegexp" #toEmail="ngModel">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_cc">CC</label>
+                            <input id="form_cc" type="email" name="cc" [(ngModel)]="request.cc" class="form-control" [pattern]="optionalEmailRegexp" #ccEmail="ngModel">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_bcc">BCC</label>
+                            <input id="form_bcc" type="email" name="bcc" [(ngModel)]="request.bcc" class="form-control" [pattern]="optionalEmailRegexp" #bccEmail="ngModel">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_subject">Subject *</label>
+                            <input id="form_subject" type="text" name="subject" [(ngModel)]="request.subject" class="form-control" placeholder="Enter the subject here" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_body">Message *</label>
+                            <textarea id="form_body" name="body" [(ngModel)]="request.body" class="form-control" placeholder="Email message *" rows="4" required="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input class="btn btn-success btn-send" [disabled]="(toEmail.errors && toEmail.errors.pattern) || (ccEmail.errors && ccEmail.errors.pattern) || (bccEmail.errors && bccEmail.errors.pattern) || !request.subject || !request.body" (click)="send()" value="Send">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div><!-- /.8 -->
+
+</div> <!-- /.row-->
